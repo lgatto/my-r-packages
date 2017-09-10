@@ -1,0 +1,179 @@
+---
+title: "My R packages"
+author: 
+- name: Laurent Gatto
+abstract: >
+ This post provides a short summary of all packages I develop, maintain or 
+ actively contribute to. The final table provides the package version in 
+ the respective repositories. For an up-to-date version of this document, 
+ see https://lgatto.github.io/my-r-packages/.
+output:
+  BiocStyle::html_document:
+    toc_float: true
+---
+
+```{r style, echo = FALSE, results = 'asis'}
+BiocStyle::markdown()
+```
+
+Latest udate: `r date()`
+
+```{r pkgs, echo=FALSE}
+library("BiocStyle")
+library("biocpkgs")
+library("knitr")
+pkgs <- ghuser <- rep <- c()
+do_pkg <- function(pkg = NULL, user = "lgatto", repo = "software") {
+    stopifnot(!is.null(pkg))
+    pkgs <<- append(pkgs, pkg)
+    ghuser <<- append(ghuser, user)
+    rep <<- append(rep, repo)
+    desc <- packageDescription(pkg)$Description
+    desc <- gsub("\\t +", "", desc)
+    desc <- gsub("\\\n +", " ", desc)
+    writeLines(desc)
+}
+```
+
+# `r Biocannopkg("RforProteomics")`
+
+```{r, echo=FALSE, results="asis", error=FALSE}
+do_pkg("RforProteomics", "lgatto", "experiment")
+```
+
+# `r Biocpkg("mzR")` 
+
+```{r, echo=FALSE, results="asis", error=FALSE}
+do_pkg("mzR", "sneumann", "software")
+```
+
+
+# `r Biocpkg("MSnbase")` 
+
+```{r echo=FALSE, results="asis", error=FALSE}
+do_pkg("MSnbase")
+```
+
+# `r Biocpkg("pRoloc")` 
+
+```{r echo=FALSE, results="asis", error=FALSE}
+do_pkg("pRoloc")
+```
+
+# `r Biocpkg("pRolocGUI")` 
+
+```{r echo=FALSE, results="asis", error=FALSE}
+do_pkg("pRolocGUI", "ComputationalProteomicsUnit", "software")
+```
+
+# `r Biocexptpkg("pRolocdata")` 
+
+```{r echo=FALSE, results="asis", error=FALSE}
+do_pkg("pRolocdata", "lgatto", "experiment")
+```
+		 
+# `r Biocpkg("rols")` 
+
+```{r echo=FALSE, results="asis", error=FALSE}
+do_pkg("rols")
+```
+
+# `r Biocpkg("rpx")` 
+
+```{r echo=FALSE, results="asis", error=FALSE}
+do_pkg("rpx")
+```
+
+# `r Biocpkg("hpar")` 
+
+```{r echo=FALSE, results="asis", error=FALSE}
+do_pkg("hpar")
+```
+
+# `r Biocpkg("Pbase")` 
+
+```{r echo=FALSE, results="asis", error=FALSE}
+do_pkg("Pbase", "ComputationalProteomicsUnit", "software")
+```
+
+# `r Biocpkg("ProteomicsAnnotationHubData")` 
+
+```{r echo=FALSE, results="asis", error=FALSE}
+do_pkg("ProteomicsAnnotationHubData")
+```
+
+# `r Biocpkg("qcmetrics")` 
+
+```{r echo=FALSE, results="asis", error=FALSE}
+do_pkg("qcmetrics")
+```
+
+# `r Biocpkg("synapter")` 
+
+```{r echo=FALSE, results="asis", error=FALSE}
+do_pkg("synapter")
+```
+
+# `r Biocexptpkg("synapterdata")`
+
+```{r echo=FALSE, results="asis", error=FALSE}
+do_pkg("synapterdata", NA_character_, "experiment")
+```
+
+# `r Biocpkg("ProtGenerics")` 
+
+```{r echo=FALSE, results="asis", error=FALSE}
+do_pkg("ProtGenerics")
+```
+
+# `r Biocpkg("yaqcaffy")` 
+
+```{r echo=FALSE, results="asis", error=FALSE}
+do_pkg("yaqcaffy", NA_character_, "software")
+```
+
+# `r Biocpkg("sequences")` 
+
+```{r echo=FALSE, results="asis", error=FALSE}
+do_pkg("sequences", "lgatto", "cran")
+```
+
+# `r Githubpkg("lgatto/biocpkgs")` 
+
+```{r echo=FALSE, results="asis", error=FALSE}
+do_pkg("biocpkgs", "lgatto", NA_character_)
+```
+
+# `r Githubpkg("lgatto/yagop")` 
+
+
+```{r echo=FALSE, results="asis", error=FALSE}
+do_pkg("yagop", "lgatto", NA_character_)
+```
+
+# Package versions {-}
+
+```{r pkgtab, echo=FALSE, error=FALSE}
+ghpkgs <- paste(ghuser, pkgs, sep = "/")
+names(ghpkgs) <- pkgs
+ghpkgs[is.na(ghuser)] <- NA
+ghv <- sapply(ghpkgs,
+              function(x) ifelse(is.na(x),
+                                 "Not available on Github",
+                                 githubpkgversion(x)))
+repv <- sapply(seq_along(rep),
+               function(i) {
+                   if (is.na(rep[i])) "Not in any package repository"
+                   else if (rep[i] == "cran") paste("CRAN", cranpkgversion(pkgs[i]))
+                   else paste("Bioconductor",
+                              biocpkgversion(pkgs[i], "release", rep[i]),
+                              "(release)",
+                              biocpkgversion(pkgs[i], "devel", rep[i]),
+                              "(devel)")
+               })
+
+
+tab <- data.frame(package = pkgs, repository = repv, GitHub = ghv,
+                  row.names = NULL)
+knitr::kable(tab)
+```
