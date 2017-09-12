@@ -1,23 +1,16 @@
 ---
 title: "My R packages"
-author: 
-- name: Laurent Gatto
-abstract: >
- This post provides a short summary of all packages I develop, maintain or 
- actively contribute to. Some packages are quite mature, other early stages.
- The final table provides the package version in the respective repositories. 
- For an up-to-date version of this document, see 
- https://lgatto.github.io/my-r-packages/.
-output:
-  BiocStyle::html_document:
-    toc_float: true
+author: Laurent Gatto
 ---
 
-```{r style, echo = FALSE, results = 'asis'}
-BiocStyle::markdown()
-```
-
 Latest udate: `r date()`
+
+This post provides a short summary of all packages I develop, maintain or 
+actively contribute to. Some packages are quite mature, other early stages.
+The final table provides the package version in the respective repositories. 
+For an up-to-date version of this document, see 
+https://lgatto.github.io/my-r-packages/.
+
 
 ```{r pkgs, echo=FALSE}
 library("BiocStyle")
