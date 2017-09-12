@@ -4,9 +4,10 @@ author:
 - name: Laurent Gatto
 abstract: >
  This post provides a short summary of all packages I develop, maintain or 
- actively contribute to. The final table provides the package version in 
- the respective repositories. For an up-to-date version of this document, 
- see https://lgatto.github.io/my-r-packages/.
+ actively contribute to. Some packages are quite mature, other early stages.
+ The final table provides the package version in the respective repositories. 
+ For an up-to-date version of this document, see 
+ https://lgatto.github.io/my-r-packages/.
 output:
   BiocStyle::html_document:
     toc_float: true
@@ -234,7 +235,7 @@ span.toc-section-number::after {
 }
 </style>
 
-Latest udate: Sun Sep 10 21:26:05 2017
+Latest udate: Mon Sep 11 20:48:55 2017
 
 
 
@@ -341,7 +342,7 @@ A simple and consistent interfaces to various tasks involving the Gene Ontology 
 |package                     |repository                                   |GitHub                  |
 |:---------------------------|:--------------------------------------------|:-----------------------|
 |RforProteomics              |Bioconductor 1.14.0 (release) 1.15.0 (devel) |1.15.1                  |
-|mzR                         |Bioconductor 2.10.0 (release) 2.11.8 (devel) |2.11.9                  |
+|mzR                         |Bioconductor 2.10.0 (release) 2.11.8 (devel) |2.11.10                 |
 |MSnbase                     |Bioconductor 2.2.0 (release) 2.3.10 (devel)  |2.3.11                  |
 |pRoloc                      |Bioconductor 1.16.1 (release) 1.17.4 (devel) |1.17.8                  |
 |pRolocGUI                   |Bioconductor 1.10.0 (release) 1.11.2 (devel) |1.11.3                  |
