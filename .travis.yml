@@ -1,0 +1,30 @@
+language: r
+cache: packages
+
+addons:
+  apt:
+    packages:
+      - libnetcdf-dev
+      - netcdf-bin # libnetcdf-dev doesn't contain nc-config in ubuntu 12.04 (in 16.04 it is part of libnetcdf-dev)
+
+install:
+- R -e 'install.packages(c("knitr", "devtools", "rmarkdown"))'
+- R -e 'source("http://www.bioconductor.org/biocLite.R")'
+- R -e 'BiocInstaller::biocLite(c("pkgDepTools", "graph", "Rgraphviz", "BiocStyle"))'
+- R -e 'BiocInstaller::biocLite(c("MSnbase", "RforProteomics", "hpar", "rols", "rpx", "pRoloc", "pRolocGUI", "pRolocdata"))'
+- R -e 'BiocInstaller::biocLite(c("ProteomicsAnnotationHubData", "synapter", "synapterdata", "Pbase", "qcmetrics", "yaqcaffy"))'
+- R -e 'devtools::install_github("lgatto/biocpkgs")'
+- R -e 'devtools::install_github("lgatto/sequences")'
+- R -e 'devtools::install_github("lgatto/yagop")'
+- R -e 'devtools::install_github("lgatto/biocpkgs")'
+
+script:
+- make
+
+deploy:
+  provider: pages
+  target_branch: master
+  skip_cleanup: true  
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
