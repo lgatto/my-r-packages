@@ -3,7 +3,7 @@ title: "My R packages"
 author: Laurent Gatto
 ---
 
-Latest udate: Mon Nov 27 16:07:49 2017
+Latest udate: Mon Nov 27 16:10:18 2017
 
 This post provides a short summary of all packages I develop, maintain or 
 actively contribute to. Some packages are quite mature, other early stages.
