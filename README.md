@@ -1,251 +1,22 @@
 ---
 title: "My R packages"
-author: 
-- name: Laurent Gatto
-abstract: >
- This post provides a short summary of all packages I develop, maintain or 
- actively contribute to. Some packages are quite mature, other early stages.
- The final table provides the package version in the respective repositories. 
- For an up-to-date version of this document, see 
- https://lgatto.github.io/my-r-packages/.
-output:
-  BiocStyle::html_document:
-    toc_float: true
+author: Laurent Gatto
 ---
 
-<script type="text/javascript">
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelector("h1").className = "title";
-});
-</script>
-<script type="text/javascript">
-document.addEventListener("DOMContentLoaded", function() {
-  var links = document.links;  
-  for (var i = 0, linksLength = links.length; i < linksLength; i++)
-    if (links[i].hostname != window.location.hostname)
-      links[i].target = '_blank';
-});
-</script>
-<style type="text/css" scoped>
-body, td {
-   font-family: sans-serif;
-   background-color: white;
-   font-size: 13px;
-}
+Latest udate: Mon Nov 27 13:20:15 2017
 
-body {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1em 1em 2em;
-  line-height: 20px;
-}
+This post provides a short summary of all packages I develop, maintain or 
+actively contribute to. Some packages are quite mature, other early stages.
+The final table provides the package version in the respective repositories. 
+For an up-to-date version of this document, see 
+https://lgatto.github.io/my-r-packages/.
 
-/* Table of contents style */
-
-div#TOC li {
-    list-style:none;
-    background-image:none;
-    background-repeat:none;
-    background-position:0;
-}
-
-/* element spacing */
-
-p, pre { 
-  margin: 0em 0em 1em;
-}
-
-/* center images and tables */
-img, table {
-  margin: 0em auto 1em;
-}
-
-p {
-  text-align: justify;
-}
-
-tt, code, pre {
-   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
-}
-
-h1, h2, h3, h4, h5, h6 { 
-  font-family: Helvetica, Arial, sans-serif;
-  margin: 1.2em 0em 0.6em 0em;
-  font-weight: bold;
-}
-
-h1.title {
-  font-size: 250%;
-  font-weight: normal;
-  color: #87b13f;
-  line-height: 1.1em;
-  margin-top: 0px;
-  border-bottom: 0px;
-}
-
-h1 {
-  font-size: 160%;
-  font-weight: normal;
-  line-height: 1.4em;
-  border-bottom: 1px #1a81c2 solid;
-}
-
-h2 {
-  font-size: 130%;  
-}
-
-h1, h2, h3 {
-  color: #1a81c2;
-}
-
-h3, h4, h5, h6 {
-  font-size:115%;
-} /* not expecting to dive deeper than four levels on a single page */
-
-/* links are simply blue, hovering slightly less blue */
-a { color: #1a81c2; }
-a:active { outline: none; }
-a:visited { color: #1a81c2; }
-a:hover { color: #4c94c2; }
-
-pre, img {
-  max-width: 100%;
-  display: block;
-}
-
-pre {
-  border: 0px none;
-  background-color: #F8F8F8;
-  white-space: pre;
-  overflow-x: auto;
-}
-
-pre code {
-  border: 1px #aaa dashed;
-  background-color: white;
-  display: block;
-  padding: 1em;  
-  color: #111;
-  overflow-x: inherit;
-}
-
-/* markdown v1 */
-pre code[class] {
-  background-color: inherit;
-}
-
-/* markdown v2 */
-pre[class] code {
-  background-color: inherit;
-}
-
-/* formatting of inline code */
-code { 
-  background-color: transparent;
-  color: #87b13f;
-  font-size: 92%;
-}
-
-/* formatting of tables */
-
-table, td, th {
-  border: none;
-  padding: 0 0.5em;
-}
-
-/* alternating row colors */
-tbody tr:nth-child(odd) td {
-  background-color: #F8F8F8;
-}
-
-blockquote {
-   color:#666666;
-   margin:0;
-   padding-left: 1em;
-   border-left: 0.5em #EEE solid;
-}
-
-hr {
-   height: 0px;
-   border-bottom: none;
-   border-top-width: thin;
-   border-top-style: dotted;
-   border-top-color: #999999;
-}
-
-span.header-section-number {
-  padding-right: 1em;
-}
-
-span.toc-section-number::after {
-    content: "  ";
-    white-space: pre;
-}
-
-@media print {
-   * {
-      background: transparent !important;
-      color: black !important;
-      filter:none !important;
-      -ms-filter: none !important;
-   }
-
-   body {
-      font-size:12pt;
-      max-width:100%;
-   }
-
-   a, a:visited {
-      text-decoration: underline;
-   }
-
-   hr {
-      visibility: hidden;
-      page-break-before: always;
-   }
-
-   pre, blockquote {
-      padding-right: 1em;
-      page-break-inside: avoid;
-   }
-
-   tr, img {
-      page-break-inside: avoid;
-   }
-
-   img {
-      max-width: 100% !important;
-   }
-
-   @page :left {
-      margin: 15mm 20mm 15mm 10mm;
-   }
-
-   @page :right {
-      margin: 15mm 10mm 15mm 20mm;
-   }
-
-   p, h2, h3 {
-      orphans: 3; widows: 3;
-   }
-
-   h2, h3 {
-      page-break-after: avoid;
-   }
-}
-</style>
-
-Latest udate: Mon Sep 11 20:48:55 2017
 
 
 
 # *[RforProteomics](http://bioconductor.org/packages/RforProteomics)*
 
-This package contains code to illustrate the 'Using R and
-Bioconductor for proteomics data analysis' paper. Two
-vignettes describe the code and data needed to reproduce
-the examples and figures described in the paper and
-functionality for proteomics visualisation.
+This package contains code to illustrate the 'Using R and Bioconductor for proteomics data analysis' and 'Visualisation of proteomics data using R and Bioconductor' manuscripts. The vignettes describe the code and data needed to reproduce the examples and figures described in the paper and functionality for proteomics visualisation. It also contain various function to discover R software for mass spectrometry and proteomics.
 
 # *[mzR](http://bioconductor.org/packages/mzR)* 
 
@@ -254,11 +25,17 @@ mzR provides a unified API to the common file formats and parsers available for 
 
 # *[MSnbase](http://bioconductor.org/packages/MSnbase)* 
 
-Manipulation, processing and visualisation of mass spectrometry and proteomics data.
+MSnbase provides infrastructure to manipulation,
+processing and visualisation mass spectrometry and
+proteomics data, ranging from raw to quantitative and
+annotated data.
 
 # *[pRoloc](http://bioconductor.org/packages/pRoloc)* 
 
-This package implements pattern recognition techniques on quantitiative mass spectrometry data to infer protein sub-cellular localisation.
+The pRoloc package implements machine learning and
+visualisation methods for the analysis and interogation
+of quantitiative mass spectrometry data to reliably infer
+protein sub-cellular localisation.
 
 # *[pRolocGUI](http://bioconductor.org/packages/pRolocGUI)* 
 
@@ -279,16 +56,18 @@ al. (2016).
 		 
 # *[rols](http://bioconductor.org/packages/rols)* 
 
-An interface to the Ontology Lookup Service (OLS) to
-access and query hundred of ontolgies directly from R.
+The rols package is an interface to the Ontology Lookup
+Service (OLS) to access and query hundred of ontolgies
+directly from R.
 
 # *[rpx](http://bioconductor.org/packages/rpx)* 
 
-This package implements an interface to proteomics data submitted to the ProteomeXchange consortium.
+The rpx package implements an interface to proteomics data submitted to the ProteomeXchange consortium.
 
 # *[hpar](http://bioconductor.org/packages/hpar)* 
 
-A simple interface to and data from the Human Protein Atlas project.
+The hpar package provides a simple R interface to and
+data from the Human Protein Atlas project.
 
 # *[Pbase](http://bioconductor.org/packages/Pbase)* 
 
@@ -339,24 +118,36 @@ A simple and consistent interfaces to various tasks involving the Gene Ontology 
 # Package versions {-}
 
 
+```
+## Warning in file(con, "r"): cannot open URL 'https://bioconductor.org/
+## packages/devel/data/experiment/html/RforProteomics.html': HTTP status was
+## '404 Not Found'
+```
+
+```
+## Warning in value[[3L]](cond): Package URL not found.
+```
+
+
+
 |package                     |repository                                   |GitHub                  |
 |:---------------------------|:--------------------------------------------|:-----------------------|
-|RforProteomics              |Bioconductor 1.14.0 (release) 1.15.0 (devel) |1.15.1                  |
-|mzR                         |Bioconductor 2.10.0 (release) 2.11.8 (devel) |2.11.10                 |
-|MSnbase                     |Bioconductor 2.2.0 (release) 2.3.10 (devel)  |2.3.11                  |
-|pRoloc                      |Bioconductor 1.16.1 (release) 1.17.4 (devel) |1.17.8                  |
-|pRolocGUI                   |Bioconductor 1.10.0 (release) 1.11.2 (devel) |1.11.3                  |
-|pRolocdata                  |Bioconductor 1.14.0 (release) 1.15.0 (devel) |1.13.3                  |
-|rols                        |Bioconductor 2.4.0 (release) 2.5.3 (devel)   |2.5.4                   |
-|rpx                         |Bioconductor 1.12.1 (release) 1.13.3 (devel) |1.13.4                  |
-|hpar                        |Bioconductor 1.18.1 (release) 1.19.1 (devel) |1.19.1                  |
-|Pbase                       |Bioconductor 0.16.0 (release) 0.17.0 (devel) |0.15.3                  |
-|ProteomicsAnnotationHubData |Bioconductor 1.6.0 (release) 1.7.0 (devel)   |1.3.3                   |
-|qcmetrics                   |Bioconductor 1.14.0 (release) 1.15.0 (devel) |1.15.0                  |
-|synapter                    |Bioconductor 2.0.0 (release) 2.1.0 (devel)   |2.1.1                   |
-|synapterdata                |Bioconductor 1.14.0 (release) 1.15.0 (devel) |Not available on Github |
-|ProtGenerics                |Bioconductor 1.8.0 (release) 1.9.0 (devel)   |1.9.0                   |
-|yaqcaffy                    |Bioconductor 1.36.0 (release) 1.37.0 (devel) |Not available on Github |
+|RforProteomics              |Bioconductor 1.15.0 (release) NA (devel)     |1.15.2                  |
+|mzR                         |Bioconductor 2.12.0 (release) 2.13.1 (devel) |2.13.1                  |
+|MSnbase                     |Bioconductor 2.4.0 (release) 2.5.0 (devel)   |2.5.1                   |
+|pRoloc                      |Bioconductor 1.18.0 (release) 1.19.0 (devel) |1.19.1                  |
+|pRolocGUI                   |Bioconductor 1.12.0 (release) 1.13.0 (devel) |1.11.3                  |
+|pRolocdata                  |Bioconductor 1.16.0 (release) 1.17.0 (devel) |1.13.3                  |
+|rols                        |Bioconductor 2.6.0 (release) 2.7.0 (devel)   |2.5.6                   |
+|rpx                         |Bioconductor 1.14.0 (release) 1.15.0 (devel) |1.13.5                  |
+|hpar                        |Bioconductor 1.20.0 (release) 1.21.0 (devel) |1.19.1                  |
+|Pbase                       |Bioconductor 0.18.0 (release) 0.19.0 (devel) |0.15.3                  |
+|ProteomicsAnnotationHubData |Bioconductor 1.8.0 (release) 1.9.0 (devel)   |1.3.3                   |
+|qcmetrics                   |Bioconductor 1.16.0 (release) 1.17.0 (devel) |1.15.2                  |
+|synapter                    |Bioconductor 2.2.0 (release) 2.3.0 (devel)   |2.1.1                   |
+|synapterdata                |Bioconductor 1.16.0 (release) 1.17.0 (devel) |Not available on Github |
+|ProtGenerics                |Bioconductor 1.10.0 (release) 1.11.0 (devel) |1.9.1                   |
+|yaqcaffy                    |Bioconductor 1.38.0 (release) 1.39.0 (devel) |Not available on Github |
 |sequences                   |CRAN 0.5.9                                   |0.5.11                  |
-|biocpkgs                    |Not in any package repository                |0.1.1                   |
+|biocpkgs                    |Not in any package repository                |0.1.2                   |
 |yagop                       |Not in any package repository                |0.1.0                   |
