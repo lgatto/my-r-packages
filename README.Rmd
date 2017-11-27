@@ -147,7 +147,7 @@ do_pkg("yagop", "lgatto", NA_character_)
 
 # Package versions {-}
 
-```{r pkgtab, echo=FALSE, error=FALSE}
+```{r pkgtab, echo=FALSE, error=FALSE, warning=FALSE, message=FALSE}
 ghpkgs <- paste(ghuser, pkgs, sep = "/")
 names(ghpkgs) <- pkgs
 ghpkgs[is.na(ghuser)] <- NA

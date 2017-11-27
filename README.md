@@ -3,7 +3,7 @@ title: "My R packages"
 author: Laurent Gatto
 ---
 
-Latest udate: Mon Nov 27 13:20:15 2017
+Latest udate: Mon Nov 27 16:07:49 2017
 
 This post provides a short summary of all packages I develop, maintain or 
 actively contribute to. Some packages are quite mature, other early stages.
@@ -118,23 +118,11 @@ A simple and consistent interfaces to various tasks involving the Gene Ontology 
 # Package versions {-}
 
 
-```
-## Warning in file(con, "r"): cannot open URL 'https://bioconductor.org/
-## packages/devel/data/experiment/html/RforProteomics.html': HTTP status was
-## '404 Not Found'
-```
-
-```
-## Warning in value[[3L]](cond): Package URL not found.
-```
-
-
-
 |package                     |repository                                   |GitHub                  |
 |:---------------------------|:--------------------------------------------|:-----------------------|
 |RforProteomics              |Bioconductor 1.15.0 (release) NA (devel)     |1.15.2                  |
 |mzR                         |Bioconductor 2.12.0 (release) 2.13.1 (devel) |2.13.1                  |
-|MSnbase                     |Bioconductor 2.4.0 (release) 2.5.0 (devel)   |2.5.1                   |
+|MSnbase                     |Bioconductor 2.4.0 (release) 2.5.0 (devel)   |2.5.2                   |
 |pRoloc                      |Bioconductor 1.18.0 (release) 1.19.0 (devel) |1.19.1                  |
 |pRolocGUI                   |Bioconductor 1.12.0 (release) 1.13.0 (devel) |1.11.3                  |
 |pRolocdata                  |Bioconductor 1.16.0 (release) 1.17.0 (devel) |1.13.3                  |
