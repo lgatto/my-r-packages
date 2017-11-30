@@ -3,7 +3,7 @@ title: "My R packages"
 author: Laurent Gatto
 ---
 
-Latest udate: Mon Nov 27 16:10:18 2017
+Latest udate: Thu Nov 30 23:07:15 2017
 
 This post provides a short summary of all packages I develop, maintain or 
 actively contribute to. Some packages are quite mature, other early stages.
@@ -66,8 +66,7 @@ The rpx package implements an interface to proteomics data submitted to the Prot
 
 # *[hpar](http://bioconductor.org/packages/hpar)* 
 
-The hpar package provides a simple R interface to and
-data from the Human Protein Atlas project.
+A simple interface to and data from the Human Protein Atlas project.
 
 # *[Pbase](http://bioconductor.org/packages/Pbase)* 
 
@@ -126,7 +125,7 @@ A simple and consistent interfaces to various tasks involving the Gene Ontology 
 |pRoloc                      |Bioconductor 1.18.0 (release) 1.19.0 (devel) |1.19.1                  |
 |pRolocGUI                   |Bioconductor 1.12.0 (release) 1.13.0 (devel) |1.11.3                  |
 |pRolocdata                  |Bioconductor 1.16.0 (release) 1.17.0 (devel) |1.13.3                  |
-|rols                        |Bioconductor 2.6.0 (release) 2.7.0 (devel)   |2.5.6                   |
+|rols                        |Bioconductor 2.6.1 (release) 2.7.2 (devel)   |2.7.2                   |
 |rpx                         |Bioconductor 1.14.0 (release) 1.15.0 (devel) |1.13.5                  |
 |hpar                        |Bioconductor 1.20.0 (release) 1.21.0 (devel) |1.19.1                  |
 |Pbase                       |Bioconductor 0.18.0 (release) 0.19.0 (devel) |0.15.3                  |
