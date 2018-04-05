@@ -3,13 +3,13 @@ title: "My R packages"
 author: Laurent Gatto
 ---
 
-Latest udate: Thu Apr  5 13:17:44 2018
+Latest udate: Thu Apr  5 13:21:42 2018
 
-This post provides a short summary of all packages I develop, maintain or
-actively contribute to. Some packages are quite mature, other early stages.
-The final table provides the package version in the respective repositories.
-For an up-to-date version of this document, see
-https://lgatto.github.io/my-r-packages/.
+This post provides a short summary of some packages I develop,
+maintain or actively contribute to. Some packages are quite mature,
+other early stages.  The final table provides the package version in
+the respective repositories.  For an up-to-date version of this
+document, see https://lgatto.github.io/my-r-packages/.
 
 
 
@@ -18,7 +18,7 @@ https://lgatto.github.io/my-r-packages/.
 
 This package contains code to illustrate the 'Using R and Bioconductor for proteomics data analysis' and 'Visualisation of proteomics data using R and Bioconductor' manuscripts. The vignettes describe the code and data needed to reproduce the examples and figures described in the paper and functionality for proteomics visualisation. It also contain various function to discover R software for mass spectrometry and proteomics.
 
-# *[mzR](http://bioconductor.org/packages/mzR)*
+# *[mzR](http://bioconductor.org/packages/mzR)* 
 
 mzR provides a unified API to the common file formats and parsers available for mass spectrometry data. It comes with a wrapper for the ISB random access parser for mass spectrometry mzXML, mzData and mzML files. The package contains the original code written by the ISB, and a subset of the proteowizard library for mzML and mzIdentML. The netCDF reading code has previously been used in XCMS.
 
@@ -30,6 +30,7 @@ processing and visualisation of mass spectrometry and
 proteomics data, ranging from raw to quantitative and
 annotated data.
 
+
 # *[pRoloc](http://bioconductor.org/packages/pRoloc)*
 
 The pRoloc package implements machine learning and
@@ -37,7 +38,9 @@ visualisation methods for the analysis and interogation
 of quantitiative mass spectrometry data to reliably infer
 protein sub-cellular localisation.
 
-# *[pRolocGUI](http://bioconductor.org/packages/pRolocGUI)*
+
+# *[pRolocGUI](http://bioconductor.org/packages/pRolocGUI)* 
+
 
 The package pRolocGUI comprises functions to interactively visualise organelle (spatial) proteomics data on the basis of pRoloc, pRolocdata and shiny.
 
@@ -47,7 +50,9 @@ Mass-spectrometry based spatial proteomics data sets and
 protein complex separation data. Also contains the time
 course expression experiment from Mulvey et al. 2015.
 
+
 # *[rols](http://bioconductor.org/packages/rols)*
+
 
 The rols package is an interface to the Ontology Lookup
 Service (OLS) to access and query hundred of ontolgies
@@ -111,24 +116,24 @@ A simple and consistent interfaces to various tasks involving the Gene Ontology 
 # Package versions {-}
 
 
-|   |package                     |repository                                                               |GitHub                  |
-|:--|:---------------------------|:------------------------------------------------------------------------|:-----------------------|
-|1  |RforProteomics              |Bioconductor 	    <td>1.15.0</td> (release) 	    <td>1.17.1</td> (devel) |1.17.1                  |
-|2  |mzR                         |Bioconductor 	    <td>2.12.0</td> (release) 	    <td>2.13.6</td> (devel) |2.13.6                  |
-|3  |MSnbase                     |Bioconductor 	    <td>2.4.2</td> (release) 	    <td>2.5.9</td> (devel)   |2.5.11                  |
-|4  |pRoloc                      |Bioconductor 	    <td>1.18.0</td> (release) 	    <td>1.19.3</td> (devel) |1.19.4                  |
-|5  |pRolocGUI                   |Bioconductor 	    <td>1.12.0</td> (release) 	    <td>1.13.1</td> (devel) |1.13.1                  |
-|6  |pRolocdata                  |Bioconductor 	    <td>1.16.0</td> (release) 	    <td>1.17.2</td> (devel) |1.17.3                  |
-|7  |rols                        |Bioconductor 	    <td>2.6.1</td> (release) 	    <td>2.7.2</td> (devel)   |2.7.2                   |
-|8  |rpx                         |Bioconductor 	    <td>1.14.0</td> (release) 	    <td>1.15.0</td> (devel) |1.13.5                  |
-|9  |hpar                        |Bioconductor 	    <td>1.20.0</td> (release) 	    <td>1.21.1</td> (devel) |1.21.1                  |
-|10 |Pbase                       |Bioconductor 	    <td>0.18.0</td> (release) 	    <td>0.19.1</td> (devel) |0.15.3                  |
-|11 |ProteomicsAnnotationHubData |Bioconductor 	    <td>1.8.0</td> (release) 	    <td>1.9.0</td> (devel)   |1.3.3                   |
-|12 |qcmetrics                   |Bioconductor 	    <td>1.16.0</td> (release) 	    <td>1.17.1</td> (devel) |1.17.1                  |
-|13 |synapter                    |Bioconductor 	    <td>2.2.0</td> (release) 	    <td>2.3.1</td> (devel)   |2.3.2                   |
-|14 |synapterdata                |Bioconductor 	    <td>1.16.0</td> (release) 	    <td>1.17.0</td> (devel) |Not available on Github |
-|15 |ProtGenerics                |Bioconductor 	    <td>1.10.0</td> (release) 	    <td>1.11.0</td> (devel) |1.9.1                   |
-|16 |yaqcaffy                    |Bioconductor 	    <td>1.38.0</td> (release) 	    <td>1.39.0</td> (devel) |Not available on Github |
-|17 |sequences                   |CRAN 0.5.9                                                               |0.5.11                  |
-|18 |biocpkgs                    |Not in any package repository                                            |0.1.2                   |
-|19 |yagop                       |Not in any package repository                                            |0.1.0                   |
+|package                     |repository                                                               |GitHub                  |
+|:---------------------------|:------------------------------------------------------------------------|:-----------------------|
+|RforProteomics              |Bioconductor 	    <td>1.15.0</td> (release) 	    <td>1.17.1</td> (devel) |1.17.1                  |
+|mzR                         |Bioconductor 	    <td>2.12.0</td> (release) 	    <td>2.13.6</td> (devel) |2.13.6                  |
+|MSnbase                     |Bioconductor 	    <td>2.4.2</td> (release) 	    <td>2.5.9</td> (devel)   |2.5.11                  |
+|pRoloc                      |Bioconductor 	    <td>1.18.0</td> (release) 	    <td>1.19.3</td> (devel) |1.19.4                  |
+|pRolocGUI                   |Bioconductor 	    <td>1.12.0</td> (release) 	    <td>1.13.1</td> (devel) |1.13.1                  |
+|pRolocdata                  |Bioconductor 	    <td>1.16.0</td> (release) 	    <td>1.17.2</td> (devel) |1.17.3                  |
+|rols                        |Bioconductor 	    <td>2.6.1</td> (release) 	    <td>2.7.2</td> (devel)   |2.7.2                   |
+|rpx                         |Bioconductor 	    <td>1.14.0</td> (release) 	    <td>1.15.0</td> (devel) |1.13.5                  |
+|hpar                        |Bioconductor 	    <td>1.20.0</td> (release) 	    <td>1.21.1</td> (devel) |1.21.1                  |
+|Pbase                       |Bioconductor 	    <td>0.18.0</td> (release) 	    <td>0.19.1</td> (devel) |0.15.3                  |
+|ProteomicsAnnotationHubData |Bioconductor 	    <td>1.8.0</td> (release) 	    <td>1.9.0</td> (devel)   |1.3.3                   |
+|qcmetrics                   |Bioconductor 	    <td>1.16.0</td> (release) 	    <td>1.17.1</td> (devel) |1.17.1                  |
+|synapter                    |Bioconductor 	    <td>2.2.0</td> (release) 	    <td>2.3.1</td> (devel)   |2.3.2                   |
+|synapterdata                |Bioconductor 	    <td>1.16.0</td> (release) 	    <td>1.17.0</td> (devel) |Not available on Github |
+|ProtGenerics                |Bioconductor 	    <td>1.10.0</td> (release) 	    <td>1.11.0</td> (devel) |1.9.1                   |
+|yaqcaffy                    |Bioconductor 	    <td>1.38.0</td> (release) 	    <td>1.39.0</td> (devel) |Not available on Github |
+|sequences                   |CRAN 0.5.9                                                               |0.5.11                  |
+|biocpkgs                    |Not in any package repository                                            |0.1.2                   |
+|yagop                       |Not in any package repository                                            |0.1.0                   |

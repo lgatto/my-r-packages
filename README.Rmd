@@ -5,11 +5,11 @@ author: Laurent Gatto
 
 Latest udate: `r date()`
 
-This post provides a short summary of all packages I develop, maintain or
-actively contribute to. Some packages are quite mature, other early stages.
-The final table provides the package version in the respective repositories.
-For an up-to-date version of this document, see
-https://lgatto.github.io/my-r-packages/.
+This post provides a short summary of some packages I develop,
+maintain or actively contribute to. Some packages are quite mature,
+other early stages.  The final table provides the package version in
+the respective repositories.  For an up-to-date version of this
+document, see https://lgatto.github.io/my-r-packages/.
 
 
 ```{r pkgs, echo=FALSE}
@@ -18,14 +18,14 @@ library("biocpkgs")
 library("knitr")
 pkgs <- ghuser <- rep <- c()
 do_pkg <- function(pkg = NULL, user = "lgatto", repo = "software") {
-	stopifnot(!is.null(pkg))
-	pkgs <<- append(pkgs, pkg)
-	ghuser <<- append(ghuser, user)
-	rep <<- append(rep, repo)
-	desc <- packageDescription(pkg)$Description
-	desc <- gsub("\\t +", "", desc)
-	desc <- gsub("\\\n +", " ", desc)
-	writeLines(desc)
+    stopifnot(!is.null(pkg))
+    pkgs <<- append(pkgs, pkg)
+    ghuser <<- append(ghuser, user)
+    rep <<- append(rep, repo)
+    desc <- packageDescription(pkg)$Description
+    desc <- gsub("\\t +", "", desc)
+    desc <- gsub("\\\n +", " ", desc)
+    writeLines(desc)
 }
 ```
 
@@ -35,7 +35,7 @@ do_pkg <- function(pkg = NULL, user = "lgatto", repo = "software") {
 do_pkg("RforProteomics", "lgatto", "experiment")
 ```
 
-# `r Biocpkg("mzR")`
+# `r Biocpkg("mzR")` 
 
 ```{r, echo=FALSE, results="asis", error=FALSE}
 do_pkg("mzR", "sneumann", "software")
@@ -48,13 +48,16 @@ do_pkg("mzR", "sneumann", "software")
 do_pkg("MSnbase")
 ```
 
+
 # `r Biocpkg("pRoloc")`
 
 ```{r echo=FALSE, results="asis", error=FALSE}
 do_pkg("pRoloc")
 ```
 
-# `r Biocpkg("pRolocGUI")`
+
+# `r Biocpkg("pRolocGUI")` 
+
 
 ```{r echo=FALSE, results="asis", error=FALSE}
 do_pkg("pRolocGUI", "ComputationalProteomicsUnit", "software")
@@ -66,7 +69,9 @@ do_pkg("pRolocGUI", "ComputationalProteomicsUnit", "software")
 do_pkg("pRolocdata", "lgatto", "experiment")
 ```
 
+
 # `r Biocpkg("rols")`
+
 
 ```{r echo=FALSE, results="asis", error=FALSE}
 do_pkg("rols")
@@ -152,22 +157,22 @@ ghpkgs <- paste(ghuser, pkgs, sep = "/")
 names(ghpkgs) <- pkgs
 ghpkgs[is.na(ghuser)] <- NA
 ghv <- sapply(ghpkgs,
-			  function(x) ifelse(is.na(x),
-								 "Not available on Github",
-								 githubpkgversion(x)))
+              function(x) ifelse(is.na(x),
+                                 "Not available on Github",
+                                 githubpkgversion(x)))
 repv <- sapply(seq_along(rep),
-			   function(i) {
-				   if (is.na(rep[i])) "Not in any package repository"
-				   else if (rep[i] == "cran") paste("CRAN", cranpkgversion(pkgs[i]))
-				   else paste("Bioconductor",
-							  biocpkgversion(pkgs[i], "release", rep[i]),
-							  "(release)",
-							  biocpkgversion(pkgs[i], "devel", rep[i]),
-							  "(devel)")
-			   })
+               function(i) {
+                   if (is.na(rep[i])) "Not in any package repository"
+                   else if (rep[i] == "cran") paste("CRAN", cranpkgversion(pkgs[i]))
+                   else paste("Bioconductor",
+                              biocpkgversion(pkgs[i], "release", rep[i]),
+                              "(release)",
+                              biocpkgversion(pkgs[i], "devel", rep[i]),
+                              "(devel)")
+               })
 
 
 tab <- data.frame(package = pkgs, repository = repv, GitHub = ghv,
-				  row.names = NULL)
-knitr::kable(tab, row.names = TRUE)
+                  row.names = NULL)
+knitr::kable(tab)
 ```
