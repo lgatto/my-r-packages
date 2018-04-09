@@ -3,7 +3,7 @@ title: "My R packages"
 author: Laurent Gatto
 ---
 
-Latest udate: Thu Apr  5 13:21:42 2018
+Latest udate: Mon Apr  9 16:05:15 2018
 
 This post provides a short summary of some packages I develop,
 maintain or actively contribute to. Some packages are quite mature,
@@ -18,7 +18,7 @@ document, see https://lgatto.github.io/my-r-packages/.
 
 This package contains code to illustrate the 'Using R and Bioconductor for proteomics data analysis' and 'Visualisation of proteomics data using R and Bioconductor' manuscripts. The vignettes describe the code and data needed to reproduce the examples and figures described in the paper and functionality for proteomics visualisation. It also contain various function to discover R software for mass spectrometry and proteomics.
 
-# *[mzR](http://bioconductor.org/packages/mzR)* 
+# *[mzR](http://bioconductor.org/packages/mzR)*
 
 mzR provides a unified API to the common file formats and parsers available for mass spectrometry data. It comes with a wrapper for the ISB random access parser for mass spectrometry mzXML, mzData and mzML files. The package contains the original code written by the ISB, and a subset of the proteowizard library for mzML and mzIdentML. The netCDF reading code has previously been used in XCMS.
 
@@ -39,7 +39,7 @@ of quantitiative mass spectrometry data to reliably infer
 protein sub-cellular localisation.
 
 
-# *[pRolocGUI](http://bioconductor.org/packages/pRolocGUI)* 
+# *[pRolocGUI](http://bioconductor.org/packages/pRolocGUI)*
 
 
 The package pRolocGUI comprises functions to interactively visualise organelle (spatial) proteomics data on the basis of pRoloc, pRolocdata and shiny.
@@ -120,10 +120,10 @@ A simple and consistent interfaces to various tasks involving the Gene Ontology 
 |:---------------------------|:------------------------------------------------------------------------|:-----------------------|
 |RforProteomics              |Bioconductor 	    <td>1.15.0</td> (release) 	    <td>1.17.1</td> (devel) |1.17.1                  |
 |mzR                         |Bioconductor 	    <td>2.12.0</td> (release) 	    <td>2.13.6</td> (devel) |2.13.6                  |
-|MSnbase                     |Bioconductor 	    <td>2.4.2</td> (release) 	    <td>2.5.9</td> (devel)   |2.5.11                  |
+|MSnbase                     |Bioconductor 	    <td>2.4.2</td> (release) 	    <td>2.5.10</td> (devel)  |2.5.11                  |
 |pRoloc                      |Bioconductor 	    <td>1.18.0</td> (release) 	    <td>1.19.3</td> (devel) |1.19.4                  |
 |pRolocGUI                   |Bioconductor 	    <td>1.12.0</td> (release) 	    <td>1.13.1</td> (devel) |1.13.1                  |
-|pRolocdata                  |Bioconductor 	    <td>1.16.0</td> (release) 	    <td>1.17.2</td> (devel) |1.17.3                  |
+|pRolocdata                  |Bioconductor 	    <td>1.16.0</td> (release) 	    <td>1.17.3</td> (devel) |1.17.3                  |
 |rols                        |Bioconductor 	    <td>2.6.1</td> (release) 	    <td>2.7.2</td> (devel)   |2.7.2                   |
 |rpx                         |Bioconductor 	    <td>1.14.0</td> (release) 	    <td>1.15.0</td> (devel) |1.13.5                  |
 |hpar                        |Bioconductor 	    <td>1.20.0</td> (release) 	    <td>1.21.1</td> (devel) |1.21.1                  |
