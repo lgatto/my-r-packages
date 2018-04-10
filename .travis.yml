@@ -10,7 +10,7 @@ addons:
 install:
 - R -e 'install.packages(c("knitr", "devtools", "rmarkdown"))'
 - R -e 'source("http://www.bioconductor.org/biocLite.R")'
-- R -e 'BiocInstaller::biocLite(c("pkgDepTools", "graph", "Rgraphviz", "BiocStyle"))'
+- travis_wait 30 R -e 'BiocInstaller::biocLite("mzR")'
 - R -e 'BiocInstaller::biocLite(c("MSnbase", "RforProteomics", "hpar", "rols", "rpx", "pRoloc", "pRolocGUI", "pRolocdata"))'
 - R -e 'BiocInstaller::biocLite(c("ProteomicsAnnotationHubData", "synapter", "synapterdata", "Pbase", "qcmetrics", "yaqcaffy"))'
 - R -e 'devtools::install_github("lgatto/biocpkgs")'
@@ -19,7 +19,7 @@ install:
 - R -e 'devtools::install_github("lgatto/biocpkgs")'
 
 script:
-- travis_wait 30 make
+- make
 
 deploy:
   provider: pages
